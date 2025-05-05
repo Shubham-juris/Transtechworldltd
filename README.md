@@ -1,5 +1,5 @@
 # Racx Studio
-![alt text](https://github.com/racmathafidz/racxstudio/blob/master/src/assets/images/screely.png)
+![alt text](https://github.com/racmathafidz/Transtechworld/blob/master/src/assets/images/screely.png)
 
 ### About
 A software house profile website built with ReactJS and TailwindCSS :computer:
@@ -20,7 +20,7 @@ A software house profile website built with ReactJS and TailwindCSS :computer:
 - [**ESLint**](https://eslint.org/) : Linting and formatting
 
 ### Demo
-**Demo :** [racxstudio.vercel.app](https://racxstudio.vercel.app/)
+**Demo :** [Transtechworld.vercel.app](https://Transtechworld.vercel.app/)
 
 ### Available Scripts
 In the project directory, you can run:

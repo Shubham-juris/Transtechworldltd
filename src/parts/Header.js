@@ -5,9 +5,6 @@
 /* eslint-disable import/extensions */
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
-
-import { Fade } from 'react-awesome-reveal';
-import { Transition } from '@headlessui/react';
 import { useLocation } from 'react-router-dom';
 
 import Button from '../elements/Button';
@@ -23,10 +20,31 @@ export default function Header() {
       <div className="flex justify-between px-4 lg:px-0">
         <BrandIcon />
 
-        <button className="block text-theme-blue lg:hidden focus:outline-none" onClick={() => setIsCollapse(!isCollapse)}>
-          <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path className={`${isCollapse ? 'hidden' : 'block'}`} strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
-            <path className={`${!isCollapse ? 'hidden' : 'block'}`} strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+        <button
+          className="block text-theme-blue lg:hidden focus:outline-none"
+          onClick={() => setIsCollapse(!isCollapse)}
+        >
+          <svg
+            className="w-8 h-8"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              className={`${isCollapse ? 'hidden' : 'block'}`}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+            <path
+              className={`${!isCollapse ? 'hidden' : 'block'}`}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
           </svg>
         </button>
       </div>
@@ -70,18 +88,8 @@ export default function Header() {
         </li>
       </ul>
 
-      <Transition
-        show={isCollapse}
-        enter="transition-opacity duration-400"
-        enterFrom="opacity-0"
-        enterTo="opacity-100"
-        leave="transition-opacity duration-400"
-        leaveFrom="opacity-100"
-        leaveTo="opacity-0"
-      >
-        <div className="transition duration-300 ease-in data-[closed]:opacity-0">
-
-          {/* <Fade> */}
+      {isCollapse && (
+        <div className="transition duration-300 ease-in">
           <ul className="z-50 flex flex-col text-theme-blue tracking-widest my-6 absolute bg-white w-full border-b-2 border-gray-300 lg:hidden">
             <li className="py-2 bg-white">
               <Button
@@ -120,9 +128,8 @@ export default function Header() {
               </Button>
             </li>
           </ul>
-          {/* </Fade> */}
         </div>
-      </Transition>
+      )}
     </header>
   );
 }

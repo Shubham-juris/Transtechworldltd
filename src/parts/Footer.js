@@ -26,10 +26,10 @@ export default function Footer() {
               Office
             </h1>
             <p className="text-lg text-gray-400 font-light">
-              rac.hafidz@gmail.com
+            Transtechworld.com
             </p>
             <p className="text-lg text-gray-400 font-light">
-              Klaten, Central Java, Indonesia
+            4393 14 Street Northeast, unit 1,101, Calgary, AB T2E 7A9
             </p>
           </div>
           <div className="w-1/3 ml-16 sm:ml-0 mt-0">
@@ -49,16 +49,9 @@ export default function Footer() {
         </div>
         <div className="flex-col text-center mt-7">
           <p className="text-lg text-gray-400 font-light">
-            Copyright 2021 - All rights reserved - Racxstudio
+            Copyright 2021 - All rights reserved - Transtechworld
           </p>
-          <div className="flex-row">
-            <p className="inline-block text-lg text-gray-400 font-light">
-              Made with &#x2764; by&nbsp;
-            </p>
-            <Button href="https://github.com/racmathafidz" type="link" target="_blank" className="text-lg text-theme-purple font-light" isExternal>
-              Racmat Hafidz Fadli
-            </Button>
-          </div>
+        
         </div>
       </div>
     </div>
